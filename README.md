@@ -27,3 +27,10 @@
 - The module pattern is one of the most basic but fundamental patterns in Node.js. It allows you to organize your code into separate files or modules that **encapsulate** specific functionality.
 <hr>
 
+## Middleware Pattern
+- The Middleware pattern involves **a chain of functions that process a request sequentially**. Each function can modify the request or response before passing it to the next function in the chain.
+<hr>
+
+## Decorator Pattern
+- The Decorator pattern dynamically adds new functionality to objects without affecting other instances. In our example, you can add your specific topping to your pizza without using the pizza object itself. This achieves the open-closed principle successfully.
+<hr>
