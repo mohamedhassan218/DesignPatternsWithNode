@@ -1,3 +1,4 @@
+// This represents a concrete product.
 class Car {
     
     constructor(model, price) {

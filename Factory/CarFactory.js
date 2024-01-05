@@ -1,3 +1,4 @@
+// This represents a concrete factory.
 const Car = require('./Car')
 
 class CarFactory {
