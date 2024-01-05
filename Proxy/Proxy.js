@@ -22,6 +22,7 @@ class Proxy extends Subject {
             // Forward the request to the real object.
             this.realSubject.request();
         } else {
+            this.spin(3000);
             this.realSubject.request();
         }
     }
