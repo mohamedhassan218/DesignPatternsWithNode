@@ -3,6 +3,8 @@ This is a simple implementation to almost all design patterns in Node.js. In thi
 
 If you found any problems to learn the main idea of a specific pattern, you can get help using this insightful [`playlist`](https://www.youtube.com/playlist?list=PLlsmxlJgn1HJpa28yHzkBmUY-Ty71ZUGc)
 
+Feel free to explore, contribute, and adapt the code as needed.
+
 Enjoy Learning 😊
 
 # Design Patterns
