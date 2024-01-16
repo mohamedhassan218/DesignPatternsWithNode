@@ -1,5 +1,5 @@
 # Design Patterns in Node.js
-This is a simple implementation to almost all design patterns in Node.js. In this repo we've to parts, the first part include the general design patterns used in all programming languages and the second one contain patterns that used specifically in Node.js.
+This is a simple implementation to almost all design patterns in Node.js. In this repo we've two parts, the first part include the general design patterns used in all programming languages and the second one contain patterns that used specifically in Node.js.
 
 If you found any problems to learn the main idea of a specific pattern, you can get help using this insightful [`playlist`](https://www.youtube.com/playlist?list=PLlsmxlJgn1HJpa28yHzkBmUY-Ty71ZUGc)
 
