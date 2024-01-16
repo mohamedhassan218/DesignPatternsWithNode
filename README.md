@@ -24,6 +24,14 @@ The Key Components of Singleton Pattern:
   - **Private Instance**: The class should have a private static instance of itself.
   - **Static Method for Instance Retrieval**: The class should provide a static method that returns the instance of the class. This method should create the instance if it doesn't exist or return the existing instance.
 
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Singleton.png" alt="Singleton UML Diagram" />
+  </p>
+</div>
+
+
 ### b. Factory Pattern
 The Factory Pattern is a creational design pattern that **provides an interface for creating objects in a super class, but allows subclasses to alter the type of objects that will be created**.
 
@@ -39,6 +47,14 @@ The Key Components of Factory Pattern:
 > 
 >  In Abstract Factory Pattern, a single factory class is responsible for creating objects of a certain type of cars. You would have a family of related factory classes, each responsible for creating a different type of product.
 
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Factory.png" alt="Factory UML Diagram" />
+  </p>
+</div>
+
+
 ### c. Builder Pattern
 The Builder Pattern provides **a way to construct a complex object step by step**. It separates the construction of a complex object from its representation, allowing the same construction process to create different representations. This pattern is particularly useful when an object needs to be constructed with numerous optional parameters or configurations, and you want to keep the construction process clear and flexible.
 
@@ -48,6 +64,14 @@ The Key Components of Builder Pattern:
   - **Concrete Builder**: A concrete builder implements the builder interface and provides specific implementations for constructing the product. It keeps track of the product being built.
   - **Product**: The product is the final complex object that is constructed step by step using the builder.
 
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Builder.png" alt="Builder UML Diagram" />
+  </p>
+</div>
+
+
 ### d. Prototype Pattern
 The Prototype pattern is a creational design pattern that **deals with the problem of creating objects**. Instead of creating objects from scratch, **the pattern suggests creating new objects by copying an existing object, known as the prototype**. This helps in avoiding the cost of creating a new instance of an object using the 'new' keyword, and allows for efficient object cloning.
 
@@ -55,6 +79,14 @@ The Key Components of Prototype Pattern:
   - **Prototype Interface/Abstract Class**: This is the interface or abstract class that declares the method `clone()`. All classes that implement this interface or extend this class will be able to use the clone method to create copies of objects.
   - **Concrete Prototype**: Classes that implement the `clone()` method. These classes act as prototypes that can be cloned to create new instances.
   - **Client**: The client is responsible for creating new objects by asking the prototype to clone itself. The client typically doesn't need to know the specific classes of objects it clones, as it works with the prototype interface.
+
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Prototype.png" alt="Prototype UML Diagram" />
+  </p>
+</div>
+
 
 ### e. Object Pool Pattern
 The Object Pool Pattern is a creational design pattern that **involves creating and maintaining a pool (or group) of reusable objects to improve performance and resource utilization**. The main idea behind the Object Pool Pattern is **to avoid the overhead of creating and destroying objects repeatedly**, especially in scenarios where the cost of creating a new instance of an object is high.
@@ -64,13 +96,45 @@ The Key Components of Object Pool Pattern:
    - **Object Creation/Initialization**: The pool is responsible for creating and initializing objects when the pool is initially created or when more instances are needed.
    - **Object Reuse**: Instead of creating new objects, the Object Pool reuses existing ones. After an object is used, it is returned to the pool, allowing other parts of the program to reuse it without the overhead of creating a new instance.
    - **Object Validation**: Optionally, the Object Pool can implement a mechanism to validate whether an object is still valid before it is handed out for reuse. If an object is found to be invalid, it can be removed from the pool, and a new one can be created.
+
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Object Pool.png" alt="Object Pool UML Diagram" />
+  </p>
+</div>
+
+
 <hr>
 
 ## 2. Structural Design Patterns
 These design patterns are all about Class and Object composition. Structural class-creation patterns use inheritance to compose interfaces. Structural object-patterns define ways to compose objects to obtain new functionality.
 
 ### a. Decorator Pattern
-The Decorator pattern dynamically adds new functionality to objects without affecting other instances. In our example, you can add your specific topping to your pizza without using the pizza object itself. This achieves the open-closed principle successfully.
+The Decorator Pattern is a structural design pattern that **allows behavior to be added to an individual object, either statically or dynamically, without affecting the behavior of other objects from the same class**. It is used to extend the functionalities of objects in a flexible and reusable way, promoting the principle of open/closed design.
+
+Key Components of Decorator Pattern:
+- **Component**:
+  - Defines the interface for objects that can have responsibilities added or removed dynamically.
+  - It's the base class or interface that concrete components and decorators conform to.
+- **ConcreteComponent**:
+  - Implements the component interface.
+  - Represents the base object to which new functionalities can be added.
+- **Decorator**:
+  - Also implements the component interface.
+  - Maintains a reference to a component and has an association with it.
+  - Dynamically adds responsibilities to the component.
+- **ConcreteDecorator**:
+  - Extends the decorator class.
+  - Adds specific functionalities to the component.
+
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Decorator.png" alt="Decorator UML Diagram" />
+  </p>
+</div>
+
 
 ### b. Adapter Pattern
 The Adapter Pattern **allows the interface of an existing class to be used as another interface**. It acts as a bridge between incompatible interfaces, enabling them to work together. 
@@ -84,6 +148,14 @@ They Key Componenets of Adapter Pattern:
 
 The Adapter pattern encapsulates the details of how the adaptation is done, providing a clean separation between the client code and the Adaptee.
 
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Adapter.gif" alt="Adapter UML Diagram" />
+  </p>
+</div>
+
+
 ### c. Composite Pattern
 The Composite Pattern is a structural design pattern that **allows you to compose objects into tree structures to represent part-whole hierarchies**. 
 
@@ -93,6 +165,14 @@ They Key Componenets of Composite Pattern:
   - **Component**: Declares the interface for objects in the composition and implements default behavior for the interface.
   - **Leaf**: Represents individual objects in the composition that do not have children. Implements the operations declared by the Component interface.
   - **Composite**: Represents a composition of objects, including both leaves and composites. It implements the operations declared by the Component interface but also manages its children, delegating the work to them.
+
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Composite.png" alt="Composite UML Diagram" />
+  </p>
+</div>
+
 
 ### d. Proxy Pattern
 The Proxy pattern is a structural design pattern that **provides a surrogate or placeholder for another object to control access to it**.
@@ -112,7 +192,15 @@ The Key Componenets of Proxy Pattern:
   - **RealSubject**: this is the real object that the proxy represents. It implements the Subject interface, providing the actual functionality that the client wants.
   - **Proxy**: the proxy acts as a surrogate or placeholder for the real object. It also implements the Subject interface, mirroring the methods of the real object. The proxy controls access to the real object and may add additional behavior before or after forwarding the request to the real object.
   - **Client**: the client is the entity that interacts with either the real object or the proxy. It treats both the real object and the proxy through the common Subject interface, making it unaware of whether it is working with the real object or its proxy.
-  
+
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Proxy.jpg" alt="Proxy UML Diagram" />
+  </p>
+</div>
+
+
 ### e. Facade Pattern
 The Facade pattern is a structural design pattern that **provides a simplified interface to a set of interfaces in a subsystem**. It **hides the complexities** of the subsystem and presents a unified interface to the client. This pattern involves a single class, known as the facade, which interfaces with various components within the subsystem to simplify interactions for the client.
 
@@ -120,6 +208,14 @@ The Key Components of Facade Pattern:
   - **Facade**: This is the main interface that clients interact with. It simplifies and coordinates the interactions with the subsystem components. The facade delegates client requests to appropriate subsystem objects.
 
   - **Subsystem Classes**: These are the various components or classes within the subsystem. They perform the actual work requested by the client but are accessed through the facade to provide a unified and simplified interface.
+
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Facade.png" alt="Facade UML Diagram" />
+  </p>
+</div>
+
 
 ### f. Bridge Pattern
 The Bridge Pattern is a structural design pattern that **separates abstraction from implementation, allowing them to vary independently**. It aims to decouple an abstraction from its implementation so that both can evolve independently **without affecting each other**. This pattern involves an interface (abstraction) and a concrete class (implementation) that can exist independently and can be varied easily.
@@ -130,6 +226,14 @@ The Key Components of Bridge Pattern:
    - **Implementor**: Defines the interface for concrete implementations. Does not have to match the abstraction's interface.
    - **Concrete Implementor**: Implements the implementor interface. Provides specific implementations for the abstraction.
 
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Bridge.png" alt="Bridge UML Diagram" />
+  </p>
+</div>
+
+
 ### g. Flyweight Pattern
 The Flyweight pattern is a structural design pattern that **focuses on minimizing memory or storage usage and sharing as much as possible between similar objects**. It is particularly useful when dealing with a large number of similar objects to improve performance and reduce resource consumption.
 
@@ -139,13 +243,45 @@ The Key Components of Flyweight Pattern:
    - **Flyweight Factory**: This is responsible for managing and creating flyweight objects. It ensures that the flyweights are shared and reused, minimizing the creation of unnecessary objects.
    - **Client**: Utilizes flyweight objects, often by obtaining them from the flyweight factory. Clients are aware of the shared and unique states of the objects.
 
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Flyweight.png" alt="Flyweight UML Diagram" />
+  </p>
+</div>
+
+
 <hr>
 
 ## 3. Behavioral Design Patterns
 These design patterns are all about Class's objects communication. Behavioral patterns are those patterns that are most specifically concerned with communication between objects.
 
 ### a. Observer Pattern
-It involves a subject that maintains a list of its dependents, which called **observers** and notifies them of any state changes. To understand it well, assume that any youtube channel is the subject and all its subscribers are the observers, when the channel have any new video, it notifies all it's subscribers with its new video.
+The Observer Pattern is a behavioral design pattern that **defines a one-to-many dependency between objects so that when one object (the subject) changes state, all its dependents (observers) are notified and updated automatically**. This pattern is used to establish a *loosely coupled* communication between objects, where the subject and observers are independent of each other.
+
+Key Components of Observer Pattern:
+- **Subject**:
+  - Maintains a list of observers and provides methods to add, remove, or notify observers.
+  - Manages the state that observers are interested in.
+  - When the state changes, it notifies all registered observers.
+- **Observer**:
+  - Defines an interface or abstract class with an update method.
+  - Concrete observers implement this method to respond to changes in the subject's state.
+- **ConcreteSubject**:
+  - Extends the Subject class and implements specific business logic.
+  - Sends notifications to observers when its state changes.
+- **ConcreteObserver**:
+  - Implements the Observer interface or extends the Observer class.
+  - Registers interest with the subject to receive notifications.
+  - Responds to updates triggered by the subject.
+
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Observer.png" alt="Observer UML Diagram" />
+  </p>
+</div>
+
 
 ### b. Iterator Pattern
 The Iterator pattern is a behavioral design pattern that **provides a way to sequentially access elements of a collection without exposing its underlying representation**. It allows you to traverse a collection of objects without exposing the details of the collection's implementation.
@@ -156,6 +292,14 @@ The Key Components of Iterator pattern:
   - **Concrete Iterator**: Implements the Iterator interface and keeps track of the current position within the collection.
   - **Aggregate Interface/Class**: Defines an interface or class that declares methods for creating iterators. This is the interface that clients use to obtain iterators for a particular collection.
   - **Concrete Aggregate**: Implements the Aggregate interface and provides an implementation for creating iterators over its elements.
+
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Iterator.png" alt="Iterator UML Diagram" />
+  </p>
+</div>
+
 
 ### c. Command Pattern
 The Command Pattern is a behavioral design pattern that turns a request into a stand-alone object, containing all the information about the request. This object can be passed around and manipulated like any other object in the system. The primary goal of the Command Pattern is to **decouple the sender of a request from its receiver, allowing for greater flexibility in handling requests**.
@@ -175,6 +319,14 @@ The Key Components of Command Pattern:
 - **Client**:
   - Creates the concrete command and associates it with the appropriate receiver.
 
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Command.webp" alt="Command UML Diagram" />
+  </p>
+</div>
+
+
 ### d. Visitor Pattern
 The Visitor pattern is a behavioral design pattern that **allows defining a new operation without changing the classes of the elements on which it operates**. It is particularly useful when you have a complex structure of objects and you want to perform various operations on these objects without modifying their structure.
 
@@ -193,6 +345,14 @@ The Key Components of Visitor Pattern:
   - Represents a collection or structure of elements.
   - It provides an interface to iterate over its elements, and it may also provide a way for visitors to access the elements.
 
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Visitor.webp" alt="Visitor UML Diagram" />
+  </p>
+</div>
+
+
 ### e. State Pattern
 The State pattern is a behavioral design pattern that **allows an object to alter its behavior when its internal state changes**. This pattern is particularly **useful when an object needs to change its behavior based on its internal state**, and these state transitions should be handled in a clean and flexible way.
 
@@ -201,6 +361,14 @@ The Key Components of State Pattern:
    - **State**: The state is an interface or abstract class that defines a set of methods that represent the various behaviors of the context. Concrete state classes implement these methods to provide specific behavior for each state.
    - **Concrete State**: Concrete state classes are implementations of the State interface, representing specific states in which the context can be. Each concrete state class provides its own implementation of the methods defined in the State interface.
    - **Client**: The client is responsible for creating the context object and setting its initial state. It interacts with the context, triggering state transitions.
+
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/State.webp" alt="State UML Diagram" />
+  </p>
+</div>
+
 
 ### f. Template Method Pattern
 The Template Method Pattern is a behavioral design pattern that simply **defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure**.
@@ -214,6 +382,14 @@ The Key Components of Template Method Pattern:
   - Implement the abstract methods defined in the abstract class.
   - Can override certain steps of the algorithm without changing its structure.
 
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Template.webp" alt="Template UML Diagram" />
+  </p>
+</div>
+
+
 ### g. Strategy Pattern
 The Strategy Pattern is a behavioral design pattern that **defines a family of algorithms, encapsulates each algorithm, and makes them interchangeable**. It lets **the algorithm vary independently from the clients that use it**. This pattern is useful when you have a set of algorithms and want to make them interchangeable, allowing the client to choose the appropriate algorithm at runtime.
 
@@ -221,6 +397,14 @@ The Key Components of Strategy Pattern:
    - **Context**: The context class is responsible for maintaining a reference to the strategy object and can switch between different strategies dynamically. It delegates the execution of the algorithm to the strategy object.
    - **Strategy**: The strategy interface declares the common interface for all concrete strategies. Concrete strategy classes implement this interface and provide specific implementations of the algorithm.
    - **Concrete Strategies**: These are the actual algorithm implementations that adhere to the strategy interface. Different concrete strategy classes encapsulate different variations of the algorithm.
+
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Strategy.png" alt="Strategy UML Diagram" />
+  </p>
+</div>
+
 
 ### h. Interpreter Pattern
 The Interpreter pattern is a behavioral design pattern that **defines a grammar for the language and an interpreter that interprets sentences in the language**. It is used to design a language interpreter or compiler. This pattern involves defining a grammar for the language and providing an interpreter to interpret sentences in the language.
@@ -243,12 +427,28 @@ The Key Components of Interpreter Pattern:
   - Builds an abstract syntax tree representing the language grammar.
   - Invokes the interpreter to interpret the abstract syntax tree.
 
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Interpreter.png" alt="Interpreter UML Diagram" />
+  </p>
+</div>
+
+
 ### i. Mediator Pattern
 The Mediator pattern is a behavioral design pattern that **defines an object (the *mediator*) that centralizes communication between a set of objects (*colleagues*)**, thus promoting loose coupling and reducing the direct connections between the objects. Instead of objects communicating directly with each other, they communicate through the mediator, which facilitates the interaction and coordination between them. **This pattern is useful in scenarios where a system has a large number of interacting components, and managing the relationships between them becomes complex**.
 
 The Key Components of Mediator Pattern:
    - **Mediator**: This is the central component that defines the interface for communication between colleagues. It encapsulates the logic for coordinating and managing interactions.
    - **Colleague**: These are the individual components that interact with each other through the mediator. Colleagues are not aware of each other they only communicate through the mediator.
+
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Mediator.png" alt="Mediator UML Diagram" />
+  </p>
+</div>
+
 
 ### j. Null Object Pattern
 The Null Object pattern is a design pattern that falls under the behavioral design patterns category. It is used to **provide an object as a surrogate for the lack of an object of a given type**. In other words, it *allows you to use an object that does nothing or has a default behavior when an actual object is expected*. This can help **avoid null references** and simplify code by removing the need for explicit null checks.
@@ -267,6 +467,14 @@ The Key Components of Null Object Pattern
 - **Client**:
   - The code that uses the objects, unaware of whether it is using a concrete object or a null object.
 
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Null Object.webp" alt="Null Object UML Diagram" />
+  </p>
+</div>
+
+
 ### k. Memento Pattern
 The Memento pattern is a behavioral design pattern that **provides the ability to capture and externalize an object's internal state so that it can be restored to this state later**, without exposing its internal structure. This pattern is particularly **useful in situations where you need to implement undo mechanisms, versioning, or snapshots of an object's state**.
 
@@ -274,6 +482,14 @@ The Key Components of Memento Pattern:
    - **Originator (or Caretaker)**: This is the object whose state needs to be saved and restored. It has an internal state that can be modified, and it also has methods to save and restore its state.
    - **Memento**: This is an object that stores the state of the Originator. It is used to represent a specific snapshot of the Originator's state.
    - **Caretaker (or Client)**: This is an object that keeps track of the different states of the Originator. It can request the Originator to save its state into a Memento or restore its state from a Memento.
+
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Memento.jpg" alt="Memento UML Diagram" />
+  </p>
+</div>
+
 
 ### l. Chain of Responsibility Pattern
 The Chain of Responsibility pattern is a behavioral design pattern that **enables an object to pass a request along a chain of potential handlers**. The main idea behind this pattern is to **decouple senders and receivers**, allowing multiple objects to handle a request without the sender needing to know which object will ultimately process it.
@@ -292,6 +508,13 @@ The Key Components of Chain of Responsibility Pattern
 - **Request**:
   - Represents the request being passed along the chain.
   - Contains the necessary information for handlers to process the request.
+
+<div align="center">
+  <p align="center">UML Diagram</p>
+  <p align="center">
+    <img src="./umls/Chain of.png" alt="Chain of Responsibility UML Diagram" />
+  </p>
+</div>
 <hr>
 
 # Node.js most Popular Patterns
