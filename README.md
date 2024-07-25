@@ -1,7 +1,7 @@
 # Design Patterns in Node.js
-This is a simple implementation to almost all design patterns in Node.js. In this repo we've two parts, the first part include the general design patterns used in all programming languages and the second one contain patterns that used specifically in Node.js.
+This is a simple implementation to almost all design patterns in Node.js. 
 
-If you found any problems to learn the main idea of a specific pattern, you can get help using this insightful [`playlist`](https://www.youtube.com/playlist?list=PLlsmxlJgn1HJpa28yHzkBmUY-Ty71ZUGc)
+If you found any problems to grasp the main idea of a specific pattern, you can get help using this insightful [`playlist`](https://www.youtube.com/playlist?list=PLlsmxlJgn1HJpa28yHzkBmUY-Ty71ZUGc)
 
 Feel free to explore, contribute, and adapt the code as needed.
 
@@ -519,8 +519,8 @@ The Key Components of Chain of Responsibility Pattern
 </div>
 <hr>
 
-# Node.js most Popular Patterns
-In this part, I cover some of the most popular patterns that is used specifically with Node.js. If you're not interested with Node, you can skip this part. Otherwise, take a deep breath and let's play some tricks with Node.js . . .
+# Other Patterns
+
 ## a. Module Pattern
 The Module Pattern is a design pattern used in JavaScript **to create encapsulated and modular code**. It provides a way to structure and organize code by breaking it into smaller, reusable modules, helping to improve maintainability, readability, and scalability of your codebase.
 
